@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'users/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Users</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Users</h1>
+            <table>
+                <tr>
+                    <td>id</td>
+                    <td>Full Name</td>
+                    <td>Email</td>
+                    <td>Created At</td>
+                    <td>Actions</td>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.created_at}}</td>
+                    <td><a href="/users/{{user.id}}">Show</a><a href="/users/{{user.id}}/edit">Edit</a><a href="/users/{{user.id}}/delete">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            <a href="/users/new">Add a new user</a>
+        </div>
+    </body>
+</html>

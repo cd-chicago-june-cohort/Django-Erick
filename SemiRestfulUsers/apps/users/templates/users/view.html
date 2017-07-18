@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>User View</title>
+    </head>
+    <body>
+        <h1>User {{user.id}}</h1>
+        <h3>Full Name: {{user.first_name}} {{user.last_name}}</h3>
+        <h3>Email: {{user.email}}</h3>
+        <h3>Created at: {{user.created_at}}</h3>
+        <h3><a href="/users/{{user.id}}/edit">Edit</a>|<a href="/users/{{user.id}}/delete">Delete</a></h3>
+        <a href="/users">Go back</a>
+    </body>
+</html>

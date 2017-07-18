@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 970px;
+}
+table td{
+    border: 2px solid black;
+}
+table{
+    border: 2px solid black;
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Welcome User</title>
+    </head>
+    <body>
+        <h1>Success! Welcome, {{request.session.user}}!</h1>
+        <h3>Successfully registered (or logged in)!</h3>
+        <a href="/"><input type="button" value="Logout"></a>
+    </body>
+</html>
